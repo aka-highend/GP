@@ -128,7 +128,7 @@ class node:
     elif self.type == "constant":
       draw.text((x - 5 , y), self.const.name, (0, 0, 0))
 
-  def drawtree(self, jpeg="tree5.png"): #You can change generated png file here to see the variant of tree function reconstruction
+  def drawtree(self, jpeg="tree6.png"): #You can change generated png file here to see the variant of tree function reconstruction
     w = self.getwidth()*100
     h = self.depth * 100 + 120
 
