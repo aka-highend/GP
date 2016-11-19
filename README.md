@@ -1,2 +1,2 @@
 # GP
-Trying genetic programming
+Trying genetic programming to reconstruct simple mathematic function
