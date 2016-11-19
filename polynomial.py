@@ -2,7 +2,7 @@ from random import random, randint, choice
 from copy import deepcopy
 from PIL import Image, ImageDraw
 
-class funwrapper:
+class polynomial:
   def __init__(self, function, childcount, name):
     self.function = function
     self.childcount = childcount
@@ -240,7 +240,7 @@ class enviroment:
         elif self.minimaxtype == "max":
           if self.population[k].fitness > self.besttree.fitness:
             self.besttree = self.population[k]
-      print "best tree's fitbess..",self.besttree.fitness
+      print "best tree's fitness..",self.besttree.fitness
     self.besttree.display()
     self.besttree.drawtree()  
 
@@ -311,10 +311,10 @@ def div(ValuesList):
         return 1
     return ValuesList[0] / ValuesList[1]
 
-addwrapper = funwrapper(add, 2, "Add")
-subwrapper = funwrapper(sub, 2, "Sub")
-mulwrapper = funwrapper(mul, 2, "Mul")
-divwrapper = funwrapper(div, 2, "Div")
+addwrapper = polynomial(add, 2, "Add")
+subwrapper = polynomial(sub, 2, "Sub")
+mulwrapper = polynomial(mul, 2, "Mul")
+divwrapper = polynomial(div, 2, "Div")
 
 def examplefun(x, y):
   return x * x + x + 2 * y + 1
