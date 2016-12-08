@@ -6,3 +6,9 @@ Trying genetic programming to reconstruct simple mathematic function. Project fo
 ![Screenshoot](https://raw.githubusercontent.com/fachrur/GP/master/tree2.png)
 
 ![Screenshoot](https://raw.githubusercontent.com/fachrur/GP/master/tree3.png)
+
+## References
+http://geneticprogramming.com/tutorial/
+
+http://www.cs.montana.edu/~bwall/cs580/introduction_to_gp.pdf
+
