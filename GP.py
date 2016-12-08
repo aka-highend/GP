@@ -2,7 +2,7 @@ from random import random, randint, choice
 from copy import deepcopy
 from PIL import Image, ImageDraw
 
-class polynomial:
+class GP:
   def __init__(self, function, childcount, name):
     self.function = function
     self.childcount = childcount
@@ -128,7 +128,7 @@ class node:
     elif self.type == "constant":
       draw.text((x - 5 , y), self.const.name, (0, 0, 0))
 
-  def drawtree(self, jpeg="tree6.png"): #You can change generated png file here to see the variant of tree function reconstruction
+  def drawtree(self, jpeg="tree.png"): #You can change generated png file here to see the variant of tree function reconstruction
     w = self.getwidth()*100
     h = self.depth * 100 + 120
 
@@ -311,10 +311,10 @@ def div(ValuesList):
         return 1
     return ValuesList[0] / ValuesList[1]
 
-addwrapper = polynomial(add, 2, "Add")
-subwrapper = polynomial(sub, 2, "Sub")
-mulwrapper = polynomial(mul, 2, "Mul")
-divwrapper = polynomial(div, 2, "Div")
+addwrapper = GP(add, 2, "Add")
+subwrapper = GP(sub, 2, "Sub")
+mulwrapper = GP(mul, 2, "Mul")
+divwrapper = GP(div, 2, "Div")
 
 def examplefun(x, y):
   return x * x + x + 2 * y + 1
